@@ -6,7 +6,7 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 22:58:10 by mli               #+#    #+#             */
-/*   Updated: 2019/10/18 01:13:52 by mli              ###   ########.fr       */
+/*   Updated: 2019/10/18 01:19:51 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,18 @@ void	ft_hit_oa(void)
 void	ft_memechr(void)
 {
 	printf("\t\t\t|| MEMCHR  TESTS: ||\n");
-	printf("Yours: %s\n", (char *)ft_memchr("\0abcde", 'b', 5));
+	printf("Yours:%s\n", (char *)ft_memchr("\0abcde", 'b', 5));
 	printf("Real :%s\n", (char *)memchr("\0abcde", 'b', 5));
 }
 
 void	ft_memecmp(void)
 {
 	printf("\t\t\t|| MEMCMP  TESTS: ||\n");
-	if (ft_memcmp("abcd", "abcd", 4) != memcmp("abcd", "abcd", 4))
+	if (ft_memcmp("abcd", "abcd", 4) * memcmp("abcd", "abcd", 4) < 0)
 		printf("1st NOT OK\n");
-	else if (ft_memcmp("abcde", "abcd", 8) != memcmp("abcde", "abcd", 8))
+	else if (ft_memcmp("abcde", "abcd", 8) * memcmp("abcde", "abcd", 8) < 0)
 		printf("2st NOT OK\n");
-	else if (ft_memcmp("\200", "\0", 5) != memcmp("\200", "\0", 5))
+	else if (ft_memcmp("\200", "\0", 5) * memcmp("\200", "\0", 5) < 0)
 		printf("3st NOT OK\n");
 	else
 		printf("MEMCMP OK\n");
@@ -165,8 +165,10 @@ void	ft_nstr(char *haystack, char *needle, size_t len)
 int		main(void)
 {
 	ft_bezero(10);
+	printf("\n");
 
 	ft_hit_oa();
+	printf("\n");
 
 	ft_memeccpy('a', 6);
 	ft_memeccpy('s', 3);
@@ -177,13 +179,15 @@ int		main(void)
 	ft_mememove(0, 4);
 	ft_mememove(4, 0);
 
+	printf("\t\t|| SPLIT:\n");
 	splitsplit("  a string  with a lot of spaces ");
 	splitsplit(NULL);
 
+	printf("\t\t|| STRCHR:\n");
 	ft_stringchr("1  2q3 e4 egfg5er u6qhn");
 	ft_stringchr(NULL);
 
-	printf("FT_STRJOIN: %s\n", ft_strjoin("sentence to", " concanate ..."));
+	printf("\t\t|| FT_STRJOIN:\n%s\n", ft_strjoin("sentence to", " concanate ..."));
 
 	printf("\t\t\t|| STRLCAT  TESTS: ||\n");
 	ft_strlkat(3);
@@ -197,6 +201,7 @@ int		main(void)
 
 	ft_ncmp();
 
+	printf("\t\t|| STRNSTR:\n");
 	ft_nstr("lorem ipsum dolor sit amet", "dolor", 15);
 	ft_nstr("lorem ipsum dolor sit amet", "dolor", 20);
 	ft_nstr("lorem ipsum dolor sit amet", "dontexist", 20);
