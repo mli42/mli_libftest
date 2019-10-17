@@ -1,0 +1,95 @@
+			|| BZERO WITH A ARRAY: ||
+0 0 0 0 0 0 0 0 0 0 
+			|| BZERO WITH NULL: ||
+
+			|| ITOA with 0 | 10 | -10 | MAX | MIN ||0
+10
+-10
+2147483647
+-2147483648
+
+			|| MEMCCPY TESTS: ||
+Yours: 345678
+wha345678
+Real : 345678
+wha345678
+			|| MEMCCPY TESTS: ||
+Yours: (null)
+wha345678
+Real : (null)
+wha345678
+			|| MEMCHR  TESTS: ||
+Yours:bcde
+Real :bcde
+			|| MEMCMP  TESTS: ||
+MEMCMP OK
+			|| MEMMEM  TESTS: ||
+Yours: 012345678DEF
+Real : 012345678DEF
+			|| MEMMEM  TESTS: ||
+Yours: 456789ABC9ABCDEF
+Real : 456789ABC9ABCDEF
+		|| SPLIT:
+a
+string
+with
+a
+lot
+of
+spaces
+		|| STRCHR:
+STRCHR IN : 1  2q3 e4 egfg5er u6qhn
+with g: gfg5er u6qhn
+with 8: (null)
+STRCHR IN : (null)
+with g: (null)
+with 8: (null)
+		|| FT_STRJOIN:
+sentence to concanate ...
+			|| STRLCAT  TESTS: ||
+
+7 with yours
+12345
+7 with the real
+12345
+
+
+9 with yours
+123456
+9 with the real
+123456
+
+
+9 with yours
+123456789
+9 with the real
+123456789
+
+			|| STRLCPY  TESTS: ||
+5 with mine
+
+5 with the real
+0
+5 with mine
+he
+5 with the real
+he
+5 with mine
+hello
+5 with the real
+hello
+			|| STRNCMP  TESTS: ||
+STRNCMP OK
+		|| STRNSTR:
+Test: (null)
+Good: (null)
+Test: dolor sit amet
+Good: dolor sit amet
+Test: (null)
+Good: (null)
+Test: (null)
+Good: (null)
+STRRCHR: a lot of letters
+STRTRIM: trim sentence with chars to trim
+SUBSTR: 45678
+SUBSTR: 
