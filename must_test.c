@@ -6,7 +6,7 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 22:58:10 by mli               #+#    #+#             */
-/*   Updated: 2019/10/18 00:41:47 by mli              ###   ########.fr       */
+/*   Updated: 2019/10/18 01:13:52 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,11 +146,11 @@ void	mapi(void)
 void	ft_ncmp(void)
 {
 	printf("\t\t\t|| STRNCMP  TESTS: ||\n");
-	if (ft_strncmp("abcd", "abcd", 4) != strncmp("abcd", "abcd", 4))
+	if (ft_strncmp("abcd", "abcd", 4) * strncmp("abcd", "abcd", 4) < 0)
 		printf("1st NOT OK\n");
-	else if (ft_strncmp("abcde", "abcd", 8) != strncmp("abcde", "abcd", 8))
+	else if (ft_strncmp("1234", "123", 5) * strncmp("1234", "123", 5) < 0)
 		printf("2st NOT OK\n");
-	else if (ft_strncmp("\200", "\0", 5) != strncmp("\200", "\0", 5))
+	else if (ft_strncmp("\200", "\0", 5) * strncmp("\200", "\0", 5) < 0)
 		printf("3st NOT OK\n");
 	else
 		printf("STRNCMP OK\n");
