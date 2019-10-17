@@ -1,0 +1,80 @@
+
+		||	Creating  [...]	||
+		||        Using         ||
+		||   lst new + add f/b  ||
+
+0
+0 -> 1
+0 -> 1 -> 2
+0 -> 1 -> 2 -> 3
+0 -> 1 -> 2 -> 3 -> 4
+0 -> 1 -> 2 -> 3 -> 4 -> 5
+0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6
+A -> 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6
+
+		|| Successfully created ||
+
+	|| LIST DEL ONE: ||
+Delete: 0
+A -> 1 -> 2 -> 3 -> 4 -> 5 -> 6
+
+	|| LIST CLEAR: ||
+Delete: 4
+Delete: 5
+Delete: 6
+A -> 1 -> 2 -> 3
+
+	|| LIST SIZE & LAST: ||
+Size: 4
+The Last One: 3
+A -> 1 -> 2 -> 3
+
+	|| LIST MAP + 2: ||
+C -> 3 -> 4 -> 5
+
+	|| LIST ITER (Just print): ||
+Delete: C
+Delete: 3
+Delete: 4
+Delete: 5
+C -> 3 -> 4 -> 5
+
+		|| Successfully done ||
+		||  DOES NULL SEGF ? ||
+
+	|| LIST DEL ONE: ||
+
+	|| LIST CLEAR: ||
+
+	|| LIST SIZE & LAST: ||
+Size: 0
+
+	|| LIST MAP + 2: ||
+
+
+	|| LIST ITER (Just print): ||
+
+		|| Successfully done ||
+		||  With 1 element ? ||
+
+	|| LIST DEL ONE: ||
+Delete: 1
+1
+
+	|| LIST CLEAR: ||
+Delete: 1
+1
+
+	|| LIST SIZE & LAST: ||
+Size: 1
+The Last One: 1
+1
+
+	|| LIST MAP + 2: ||
+3
+
+	|| LIST ITER (Just print): ||
+Delete: 1
+1
+		|| Successfully done ALL my tests ||
+		||           Congrats !           ||
