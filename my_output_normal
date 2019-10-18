@@ -1,14 +1,12 @@
-			|| BZERO WITH A ARRAY: ||
+
+			|| Testing 17 functions ||
+			||    FIRST PART !!     ||
+
+|| bzero  || ft_itoa || memccpy || memcmp|| move || strcher ||
+|| memchr || strlcat || strlcpy ||strnstr|| strncmp ||
+
+			|| BZERO WITH A ARRAY OF 10: ||
 0 0 0 0 0 0 0 0 0 0 
-			|| BZERO WITH NULL: ||
-
-			|| ITOA with 0 | 10 | -10 | MAX | MIN ||
-0
-10
--10
-2147483647
--2147483648
-
 			|| MEMCCPY TESTS: ||
 Yours: 345678
 wha345678
@@ -30,23 +28,11 @@ Real : 012345678DEF
 			|| MEMMEM  TESTS: ||
 Yours: 456789ABC9ABCDEF
 Real : 456789ABC9ABCDEF
-		|| SPLIT:
-a
-string
-with
-a
-lot
-of
-spaces
-		|| STRCHR:
+
+			|| STRCHR: ||
 STRCHR IN : 1  2q3 e4 egfg5er u6qhn
 with g: gfg5er u6qhn
 with 8: (null)
-STRCHR IN : (null)
-with g: (null)
-with 8: (null)
-		|| FT_STRJOIN:
-sentence to concanate ...
 			|| STRLCAT  TESTS: ||
 
 7 with yours
@@ -68,9 +54,8 @@ sentence to concanate ...
 
 			|| STRLCPY  TESTS: ||
 5 with mine
-
 5 with the real
-0
+
 5 with mine
 he
 5 with the real
@@ -92,6 +77,41 @@ Good: (null)
 Test: (null)
 Good: (null)
 STRRCHR: a lot of letters
+			||    SECONDE PART !!   ||
+	|| substr || strtrim || strjoin || split || itoa || strmapi ||
+			|| ITOA with 0 | 10 | -10 | MAX | MIN ||
+0
+10
+-10
+2147483647
+-2147483648
+
+		|| SPLIT: ||
+a
+string
+with
+a
+lot
+of
+spaces
+		|| FT_STRJOIN: ||
+sentence to concanate ...
+		|| FT_STRJOIN: ||
+(null)
+		|| FT_STRJOIN: ||
+(null)
+		|| FT_STRJOIN: ||
+(null)
+
+			|| STRMAPI  TESTS: ||
+UNE PHRASE
+(null)
+
 STRTRIM: trim sentence with chars to trim
+STRTRIM NULL: (null)
 SUBSTR: 45678
+SUBSTR: (null)
 SUBSTR: (should not print anything) 
+
+			 || Does pass theses tests ||
+			 ||       Congrats !!      ||

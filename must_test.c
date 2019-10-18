@@ -6,7 +6,7 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 22:58:10 by mli               #+#    #+#             */
-/*   Updated: 2019/10/18 11:59:37 by mli              ###   ########.fr       */
+/*   Updated: 2019/10/18 13:57:31 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_bezero(int len)
 	int i = 0;
 	char b[len];
 
-	printf("\t\t\t|| BZERO WITH A ARRAY: ||\n");
+	printf("\t\t\t|| BZERO WITH A ARRAY OF %d: ||\n", len);
 	ft_bzero(b, len);
 	while (i < len)
 		printf("%d ", b[i++]);
@@ -131,14 +131,17 @@ void	ft_strlkpy(unsigned int size)
 	char src[] = "hello";
 
 	printf("%d with mine\n", (int)ft_strlcpy(dest, src, size));
-	printf("%s\n", dest);
+	if (size != 0)
+		printf("%s\n", dest);
 	printf("%d with the real\n", (int)strlcpy(dest2, src, size));
-	printf("%s\n", dest2);
+	if (size != 0)
+		printf("%s\n", dest2);
 }
 
 void	mapi(void)
 {
 	printf("%s\n", ft_strmapi("une phrase", &fct_upper));
+	printf("%s\n", ft_strmapi(NULL, &fct_upper));
 }
 
 void	ft_ncmp(void)
@@ -162,29 +165,26 @@ void	ft_nstr(char *haystack, char *needle, size_t len)
 
 int		main(void)
 {
-	ft_bezero(10);
-	printf("\n");
+	printf("\n\t\t\t|| Testing 17 functions ||\n");
+	printf("\t\t\t||    FIRST PART !!     ||\n\n");
 
-	ft_hit_oa();
-	printf("\n");
+	printf("|| bzero  || ft_itoa || memccpy || memcmp|| move || strcher ||\n");
+	printf("|| memchr || strlcat || strlcpy ||strnstr|| strncmp ||\n\n");
+
+	ft_bezero(10);
 
 	ft_memeccpy('a', 6);
 	ft_memeccpy('s', 3);
 
 	ft_memechr();
+
 	ft_memecmp();
 
 	ft_mememove(0, 4);
 	ft_mememove(4, 0);
 
-	printf("\t\t|| SPLIT:\n");
-	splitsplit("  a string  with a lot of spaces ");
-	splitsplit(NULL);
-
-	printf("\t\t|| STRCHR:\n");
+	printf("\n\t\t\t|| STRCHR: ||\n");
 	ft_stringchr("1  2q3 e4 egfg5er u6qhn");
-
-	printf("\t\t|| FT_STRJOIN:\n%s\n", ft_strjoin("sentence to", " concanate ..."));
 
 	printf("\t\t\t|| STRLCAT  TESTS: ||\n");
 	ft_strlkat(3);
@@ -193,6 +193,7 @@ int		main(void)
 
 	printf("\t\t\t|| STRLCPY  TESTS: ||\n");
 	ft_strlkpy(0);
+	printf("\n");
 	ft_strlkpy(3);
 	ft_strlkpy(7);
 
@@ -205,9 +206,31 @@ int		main(void)
 	ft_nstr("lorem ipsum dolor sit amet", "dontexist", 200);
 
 	printf("STRRCHR: %s\n", ft_strrchr("a sentence which has a lot of letters", 'a'));
+	printf("\t\t\t||    SECONDE PART !!   ||\n");
+	printf("\t|| substr || strtrim || strjoin || split || itoa || strmapi ||\n");
 
-	printf("STRTRIM: %s\n", ft_strtrim("a trim sentence with chars to trim  a", "a "));
+	ft_hit_oa();
+	printf("\n");
+
+	printf("\t\t|| SPLIT: ||\n");
+	splitsplit("  a string  with a lot of spaces ");
+	splitsplit(NULL);
+
+	printf("\t\t|| FT_STRJOIN: ||\n%s\n", ft_strjoin("sentence to", " concanate ..."));
+	printf("\t\t|| FT_STRJOIN: ||\n%s\n", ft_strjoin(NULL, " concanate ..."));
+	printf("\t\t|| FT_STRJOIN: ||\n%s\n", ft_strjoin("sentence to", NULL));
+	printf("\t\t|| FT_STRJOIN: ||\n%s\n", ft_strjoin(NULL, NULL));
+
+	printf("\n\t\t\t|| STRMAPI  TESTS: ||\n");
+	mapi();
+
+	printf("\nSTRTRIM: %s\n", ft_strtrim("a trim sentence with chars to trim  a", "a "));
+	printf("STRTRIM NULL: %s\n", ft_strtrim(NULL, "a "));
 
 	printf("SUBSTR: %s\n", ft_substr("0123456789ABCDEF\0", 4, 5));
+	printf("SUBSTR: %s\n", ft_substr(NULL, 4, 5));
 	printf("SUBSTR: (should not print anything) %s\n", ft_substr("0123456789ABCDEF\0", 30, 5));
+
+	printf("\n\t\t\t || Does pass theses tests ||");
+	printf("\n\t\t\t ||       Congrats !!      ||\n");
 }
