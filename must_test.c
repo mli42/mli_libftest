@@ -6,7 +6,7 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 22:58:10 by mli               #+#    #+#             */
-/*   Updated: 2019/10/18 09:55:36 by mli              ###   ########.fr       */
+/*   Updated: 2019/10/18 11:59:37 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ void	ft_bezero(int len)
 	while (i < len)
 		printf("%d ", b[i++]);
 	printf("\n");
-	printf("\t\t\t|| BZERO WITH NULL: ||\n");
-	ft_bzero(NULL, len);
 }
 
 void	ft_memeccpy(int c, size_t n)
@@ -185,7 +183,6 @@ int		main(void)
 
 	printf("\t\t|| STRCHR:\n");
 	ft_stringchr("1  2q3 e4 egfg5er u6qhn");
-	ft_stringchr(NULL);
 
 	printf("\t\t|| FT_STRJOIN:\n%s\n", ft_strjoin("sentence to", " concanate ..."));
 
