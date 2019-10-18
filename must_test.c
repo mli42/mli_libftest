@@ -6,7 +6,7 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 22:58:10 by mli               #+#    #+#             */
-/*   Updated: 2019/10/18 01:19:51 by mli              ###   ########.fr       */
+/*   Updated: 2019/10/18 09:55:36 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ft_memeccpy(int c, size_t n)
 
 void	ft_hit_oa(void)
 {
-	printf("\t\t\t|| ITOA with 0 | 10 | -10 | MAX | MIN ||");
+	printf("\t\t\t|| ITOA with 0 | 10 | -10 | MAX | MIN ||\n");
 	printf("%s\n", ft_itoa(0));
 	printf("%s\n", ft_itoa(10));
 	printf("%s\n", ft_itoa(-10));
@@ -201,7 +201,7 @@ int		main(void)
 
 	ft_ncmp();
 
-	printf("\t\t|| STRNSTR:\n");
+	printf("\n\t\t\t|| STRNSTR: ||\n");
 	ft_nstr("lorem ipsum dolor sit amet", "dolor", 15);
 	ft_nstr("lorem ipsum dolor sit amet", "dolor", 20);
 	ft_nstr("lorem ipsum dolor sit amet", "dontexist", 20);
@@ -212,5 +212,5 @@ int		main(void)
 	printf("STRTRIM: %s\n", ft_strtrim("a trim sentence with chars to trim  a", "a "));
 
 	printf("SUBSTR: %s\n", ft_substr("0123456789ABCDEF\0", 4, 5));
-	printf("SUBSTR: %s\n", ft_substr("0123456789ABCDEF\0", 30, 5));
+	printf("SUBSTR: (should not print anything) %s\n", ft_substr("0123456789ABCDEF\0", 30, 5));
 }

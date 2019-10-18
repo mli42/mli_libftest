@@ -2,7 +2,8 @@
 0 0 0 0 0 0 0 0 0 0 
 			|| BZERO WITH NULL: ||
 
-			|| ITOA with 0 | 10 | -10 | MAX | MIN ||0
+			|| ITOA with 0 | 10 | -10 | MAX | MIN ||
+0
 10
 -10
 2147483647
@@ -80,7 +81,8 @@ hello
 hello
 			|| STRNCMP  TESTS: ||
 STRNCMP OK
-		|| STRNSTR:
+
+			|| STRNSTR: ||
 Test: (null)
 Good: (null)
 Test: dolor sit amet
@@ -92,4 +94,4 @@ Good: (null)
 STRRCHR: a lot of letters
 STRTRIM: trim sentence with chars to trim
 SUBSTR: 45678
-SUBSTR: 
+SUBSTR: (should not print anything) 
